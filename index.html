@@ -204,7 +204,7 @@
 
     </div>
 
-    <form onsubmit="sendEmail(); reset(); return False;" action="#">
+    <form onsubmit="sendEmail(); reset(); return False;" >
 
         <input type="text" id="name" class="box">
         <input type="email" id="email" class="box">
@@ -232,6 +232,7 @@
             }).then(
             message => alert("Message Sent Succesfully")
             );
+        console.log("Bhai koshish to kar rahe hain. dekho kya hota h!!")
         }
     </script>
 
