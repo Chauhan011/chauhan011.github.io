@@ -204,7 +204,7 @@
 
     </div>
 
-    <form action="">
+    <form action="sendEmail(); reset(); return False;">
 
         <input type="text" placeholder="name" class="box">
         <input type="email" placeholder="email" class="box">
@@ -215,6 +215,25 @@
     </form>
 
 </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                 Host : "smtp.gmail.com",
+                 Username : "cse2023vishal181@iesbpl.ac.in",
+                 Password : "iesbpl@2023",
+                 To : 'vishalchouhan25537@gmail.com',
+                 From : document.getElementById("email").value,
+                 Subject : "New Contect From Enquary",
+                 Body : "Name: " + document.getElementById("Name").value
+                     + "<br> Email: " + document.getElementById("email").value
+                     + "<br> Email: " + document.getElementById("phone").value
+                     + "<br> Email: " + document.getElementById("message").value
+            }).then(
+            message => alert("Message Sent Succesfully")
+            );
+        }
+    </script>
 
 </section>
 
